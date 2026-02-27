@@ -1,0 +1,242 @@
+:root{
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --primary:#111827;
+  --danger:#b91c1c;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+.brand-header{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  padding:10px 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.brand-header img{max-height:54px; width:auto;}
+
+.nav{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  padding:10px 12px;
+  background:#fff;
+  border-bottom:1px solid var(--line);
+}
+.nav a{
+  text-decoration:none;
+  color:var(--text);
+  padding:8px 12px;
+  border-radius:10px;
+  border:1px solid transparent;
+  font-weight:700;
+}
+.nav a:hover{background:#f3f4f6}
+.nav a.active{
+  border-color:var(--line);
+  background:#f9fafb;
+}
+
+.container{
+  max-width:1100px;
+  margin:18px auto;
+  padding:0 14px 40px;
+}
+
+.page-header{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:12px;
+}
+h1{margin:0; font-size:26px;}
+.muted{margin:6px 0 0; color:var(--muted);}
+
+.header-actions{display:flex; gap:10px; flex-wrap:wrap;}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.filters{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:10px 0;
+}
+.filters input, .filters button{
+  height:40px;
+}
+
+.field{margin:10px 0;}
+label{display:block; font-weight:800; margin-bottom:6px;}
+input[type="text"], input[type="date"], input[type="email"], textarea{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:#fff;
+  font-size:14px;
+}
+textarea{resize:vertical}
+
+.grid-2{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap:12px;
+}
+.grid-3{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap:12px;
+}
+@media (max-width: 900px){
+  .grid-3{grid-template-columns:1fr}
+}
+@media (max-width: 700px){
+  .grid-2{grid-template-columns:1fr}
+}
+
+.check-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:10px;
+}
+.check-row{
+  display:grid;
+  grid-template-columns: 240px 1fr;
+  gap:10px;
+  align-items:center;
+  padding:10px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#fff;
+}
+.check-row label{
+  margin:0;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.radio-row{display:flex; gap:14px; flex-wrap:wrap;}
+.radio-row label{display:flex; gap:8px; align-items:center; margin:0; font-weight:700;}
+
+.divider{
+  height:1px;
+  background:var(--line);
+  margin:14px 0;
+}
+
+button{
+  border:1px solid var(--primary);
+  background:var(--primary);
+  color:#fff;
+  border-radius:10px;
+  padding:9px 12px;
+  font-weight:800;
+  cursor:pointer;
+}
+button.secondary{
+  background:#fff;
+  color:var(--text);
+  border:1px solid var(--line);
+}
+button.secondary:hover{background:#f9fafb}
+button:hover{opacity:.95}
+
+.secondary-link{
+  color:var(--text);
+  font-weight:800;
+  text-decoration:none;
+  padding:10px 0;
+}
+.secondary-link:hover{text-decoration:underline}
+
+.form-actions{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-top:14px;
+}
+
+.table-wrap{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+thead th{
+  background:#f9fafb;
+  text-align:left;
+  padding:12px;
+  border-bottom:1px solid var(--line);
+  font-weight:900;
+}
+tbody td{
+  padding:12px;
+  border-bottom:1px solid var(--line);
+}
+tbody tr:hover{background:#fcfcfd}
+
+.actions-row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+button.ghost{
+  background:#fff;
+  color:var(--text);
+  border:1px solid var(--line);
+}
+button.ghost.danger{
+  color:var(--danger);
+  border-color:#fecaca;
+}
+button.ghost.danger:hover{background:#fef2f2}
+
+/* PRINT */
+.print-page{
+  background:#fff;
+}
+.print-toolbar{
+  position:sticky;
+  top:0;
+  display:flex;
+  gap:10px;
+  padding:10px;
+  border-bottom:1px solid var(--line);
+  background:#fff;
+  z-index:10;
+}
+.print-shell{
+  max-width:1100px;
+  margin:0 auto;
+  padding:16px;
+}
+
+@media print{
+  .no-print{display:none !important;}
+  body{background:#fff;}
+}

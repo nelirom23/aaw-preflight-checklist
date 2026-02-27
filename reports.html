@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Reports</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <div class="brand-header">
+    <img src="aaw-header.png" alt="Air Ambulance Worldwide" />
+  </div>
+
+  <div class="nav">
+    <a href="preflight.html">Checklist</a>
+    <a href="history.html">History</a>
+    <a href="reports.html" class="active">Reports</a>
+  </div>
+
+  <div class="container">
+    <div class="page-header">
+      <div>
+        <h1>Reports</h1>
+        <p class="muted">Select a row, then print/save PDF, or email it.</p>
+      </div>
+      <div class="header-actions">
+        <button id="refreshReports" class="secondary" type="button">Refresh</button>
+        <!-- Removed: Reset Data + Unregister Offline Cache -->
+      </div>
+    </div>
+
+    <div class="filters">
+      <input id="rFlight" type="text" placeholder="Flight # (optional)" />
+      <!-- Only ONE date box now -->
+      <input id="rDate" type="date" />
+      <button id="printReport" type="button">Print or Save PDF</button>
+      <button id="emailPdfBtn" type="button">Email PDF</button>
+      <!-- Removed: recipient email input -->
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Select</th><th>Date</th><th>Flight</th><th>Tail</th><th>Crew</th><th>Completed By</th>
+          </tr>
+        </thead>
+        <tbody id="reportsBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

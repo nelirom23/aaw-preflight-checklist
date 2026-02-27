@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Preflight Checklist</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <div class="brand-header">
+    <img src="aaw-header.png" alt="Air Ambulance Worldwide" />
+  </div>
+
+  <div class="nav">
+    <a href="preflight.html" class="active">Checklist</a>
+    <a href="history.html">History</a>
+    <a href="reports.html">Reports</a>
+  </div>
+
+  <div class="container">
+    <div class="page-header">
+      <div>
+        <h1>Preflight Checklist</h1>
+        <p class="muted">Complete the form and submit. Use History to edit or delete.</p>
+      </div>
+    </div>
+
+    <form id="preflightForm" class="card">
+      <!-- TOP REQUIRED INFO -->
+      <div class="grid-2">
+        <div class="field">
+          <label>Date *</label>
+          <input id="date" type="date" required />
+        </div>
+
+        <div class="field">
+          <label>Flight # *</label>
+          <input id="flight" type="text" placeholder="e.g. 257SJ" required />
+        </div>
+
+        <div class="field">
+          <label>Tail # *</label>
+          <input id="tail" type="text" placeholder="e.g. N123AB" required />
+        </div>
+
+        <div class="field">
+          <label>Crew *</label>
+          <input id="crew" type="text" placeholder="e.g. Matt / Chelsea" required />
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- BAG SET -->
+      <h2>Bag Set</h2>
+
+      <div class="grid-2">
+        <div class="check-row">
+          <label class="check-left"><input id="jumpBag" type="checkbox" /> Jump Bag</label>
+          <input id="jumpBag_note" type="text" placeholder="Notes" />
+        </div>
+
+        <div class="check-row">
+          <label class="check-left"><input id="airwayBag" type="checkbox" /> Airway Bag</label>
+          <input id="airwayBag_note" type="text" placeholder="Notes" />
+        </div>
+
+        <div class="check-row">
+          <label class="check-left"><input id="medBag" type="checkbox" /> Medication Bag</label>
+          <input id="medBag_note" type="text" placeholder="Notes" />
+        </div>
+
+        <div class="check-row">
+          <label class="check-left"><input id="supplyBag" type="checkbox" /> Supply / Trauma Bag</label>
+          <input id="supplyBag_note" type="text" placeholder="Notes" />
+        </div>
+
+        <div class="check-row">
+          <label class="check-left"><input id="cleaningBag" type="checkbox" /> Cleaning Bag</label>
+          <input id="cleaningBag_note" type="text" placeholder="Notes" />
+        </div>
+
+        <div class="check-row">
+          <label class="check-left"><input id="cardiacMonitor" type="checkbox" /> Cardiac Monitor</label>
+          <input id="cardiacMonitor_asset" type="text" placeholder="Asset #" />
+        </div>
+
+        <div class="check-row">
+          <label class="check-left"><input id="ventilator" type="checkbox" /> Ventilator</label>
+          <input id="ventilator_asset" type="text" placeholder="Asset #" />
+        </div>
+
+        <div class="check-row">
+          <label class="check-left"><input id="portableSuction" type="checkbox" /> Portable Suction</label>
+          <input id="portableSuction_asset" type="text" placeholder="Asset #" />
+        </div>
+
+        <div class="check-row">
+          <label class="check-left"><input id="epoc" type="checkbox" /> EPOC</label>
+          <input id="epoc_asset" type="text" placeholder="Asset #" />
+        </div>
+
+        <div class="check-row">
+          <label class="check-left"><input id="ivPumps" type="checkbox" /> IV Pumps x4</label>
+          <input id="ivPumps_asset" type="text" placeholder="Asset / Notes" />
+        </div>
+
+        <div class="check-row">
+          <label class="check-left"><input id="computerBag" type="checkbox" /> Computer / Bag</label>
+          <input id="computerBag_asset" type="text" placeholder="Asset #" />
+        </div>
+
+        <div class="check-row">
+          <label class="check-left"><input id="companyPhone" type="checkbox" /> Company Cell Phone</label>
+          <input id="companyPhone_asset" type="text" placeholder="Asset #" />
+        </div>
+
+        <div class="check-row">
+          <label class="check-left"><input id="otherBag" type="checkbox" /> Other</label>
+          <input id="otherBag_note" type="text" placeholder="Describe" />
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- SPECIAL EQUIPMENT -->
+      <h2>Special Equipment</h2>
+
+      <div class="grid-2">
+        <div class="check-row">
+          <label class="check-left"><input id="pedsBag" type="checkbox" /> Pediatric Bag</label>
+          <input id="pedsBag_note" type="text" placeholder="Notes" />
+        </div>
+
+        <div class="check-row">
+          <label class="check-left"><input id="pedimate" type="checkbox" /> PediMate</label>
+          <input id="pedimate_note" type="text" placeholder="Notes" />
+        </div>
+
+        <div class="check-row">
+          <label class="check-left"><input id="neomate" type="checkbox" /> NeoMate</label>
+          <input id="neomate_note" type="text" placeholder="Notes" />
+        </div>
+
+        <div class="check-row">
+          <label class="check-left"><input id="syringePumps" type="checkbox" /> Syringe Pumps</label>
+          <input id="syringePumps_asset" type="text" placeholder="Asset #" />
+        </div>
+
+        <div class="check-row">
+          <label class="check-left"><input id="isoCapsule" type="checkbox" /> Transport ISO Capsule</label>
+          <input id="isoCapsule_note" type="text" placeholder="Notes" />
+        </div>
+
+        <div class="check-row">
+          <label class="check-left"><input id="alineCable" type="checkbox" /> A-Line Cable / Attachments</label>
+          <input id="alineCable_note" type="text" placeholder="Notes" />
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- OXYGEN -->
+      <h2>Oxygen Calculation</h2>
+
+      <div class="grid-2">
+        <div class="field">
+          <label>Method</label>
+          <input id="o2_method" type="text" />
+        </div>
+        <div class="field">
+          <label>PSI</label>
+          <input id="o2_psi" type="text" />
+        </div>
+
+        <div class="field">
+          <label>Tidal Volume</label>
+          <input id="o2_tv" type="text" />
+        </div>
+        <div class="field">
+          <label>Resp. Rate</label>
+          <input id="o2_rr" type="text" />
+        </div>
+
+        <div class="field">
+          <label>FiO2</label>
+          <input id="o2_fio2" type="text" />
+        </div>
+        <div class="field">
+          <label>M-Tank</label>
+          <input id="o2_mtank" type="text" />
+        </div>
+
+        <div class="field">
+          <label>Portable Tank</label>
+          <input id="o2_ptank" type="text" />
+        </div>
+        <div class="field">
+          <label>Total Time</label>
+          <input id="o2_total" type="text" />
+        </div>
+
+        <div class="field">
+          <label>Time With Patient</label>
+          <input id="o2_withpt" type="text" />
+        </div>
+        <div class="field">
+          <label>Extra</label>
+          <input id="o2_extra" type="text" />
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- CONFIRMATIONS -->
+      <h2>Confirmations</h2>
+
+      <div class="grid-3">
+        <div class="field">
+          <label>Vent circuit on supply & airway bag?</label>
+          <div class="radio-row">
+            <label><input type="radio" name="confVent" value="YES" /> YES</label>
+            <label><input type="radio" name="confVent" value="NO" /> NO</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>All chargers available/accountable?</label>
+          <div class="radio-row">
+            <label><input type="radio" name="confChargers" value="YES" /> YES</label>
+            <label><input type="radio" name="confChargers" value="NO" /> NO</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>All documents collected (incl. international list)?</label>
+          <div class="radio-row">
+            <label><input type="radio" name="confDocs" value="YES" /> YES</label>
+            <label><input type="radio" name="confDocs" value="NO" /> NO</label>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- BOTTOM: MISSED + COMPLETED BY (AT THE BOTTOM) -->
+      <div class="grid-2">
+        <div class="field">
+          <label>Equipment missed or misplaced</label>
+          <textarea id="missedNotes" rows="5" placeholder="Write details here..."></textarea>
+        </div>
+
+        <div class="field">
+          <label>Completed By *</label>
+          <input id="completedBy" type="text" placeholder="Full name" required />
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button id="submitBtn" type="submit">Submit</button>
+        <a class="secondary-link" href="history.html">Go to History</a>
+      </div>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Print Checklist</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="print-page">
+  <div class="print-toolbar no-print">
+    <button id="printBtn" type="button">Print / Save PDF</button>
+    <button id="exitBtn" class="secondary" type="button">Exit</button>
+  </div>
+
+  <div class="print-shell">
+    <div id="printContent"></div>
+  </div>
+
+<script>
+  // LOCK ALL FIELDS ON PRINT PAGE (prevents changing Yes/No)
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('input, textarea, select, button')
+      .forEach(el => {
+        // Keep your top Print/Exit buttons clickable if they are buttons
+        if (el.id === 'printBtn' || el.id === 'exitBtn') return;
+        el.disabled = true;
+      });
+  });
+</script>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
